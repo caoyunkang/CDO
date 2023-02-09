@@ -6,7 +6,7 @@
 ## Abstract
 Most unsupervised image anomaly localization methods suffer from overgeneralization because of the high generalization abilities of convolutional neural networks, leading to unreliable predictions. To mitigate the overgeneralization, this study proposes to collaboratively optimize normal and abnormal feature distributions with the assistance of synthetic anomalies, namely collaborative discrepancy optimization (CDO). CDO introduces a margin optimization module and an overlap optimization module to optimize the two key factors determining the localization performance, i.e. , the margin and the overlap between the discrepancy distributions (DDs) of normal and abnormal samples. With CDO, a large margin and a small overlap between normal and abnormal DDs are obtained, and the prediction reliability is boosted. Experiments on MVTec2D and MVTec3D show that CDO effectively mitigates the overgeneralization and achieves great anomaly localization performance with real-time computation efficiency. A real-world automotive plastic parts inspection application further demonstrates the capability of the proposed CDO.
 ## BibTex Citation
-If you like our [paper](https://arxiv.org/abs/2107.12571) or code, please use the following BibTex:
+If you like our [paper](https://ieeexplore.ieee.org/document/10034849) or code, please use the following BibTex:
 ```
 @ARTICLE{10034849,
   author={Cao, Yunkang and Xu, Xiaohao and Liu, Zhaoge and Shen, Weiming},
