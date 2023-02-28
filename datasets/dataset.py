@@ -46,16 +46,16 @@ SKIP_BACKGROUND = {
     },
 
     'mvtec3d': {
-        'bagel': True,
-        'cable_gland': True,
-        'carrot': True,
-        'cookie': True,
-        'dowel': True,
-        'peach': True,
-        'potato': True,
-        'rope': True,
-        'tire': True,
-        'foam': True
+        'bagel': False,
+        'cable_gland': False,
+        'carrot': False,
+        'cookie': False,
+        'dowel': False,
+        'peach': False,
+        'potato': False,
+        'rope': False,
+        'tire': False,
+        'foam': False
     },
 }
 
@@ -216,6 +216,11 @@ class CDODataset(Dataset):
         MAX_TRY_NUMBER = 200
         for i in range(patch_number):
             try_count = 0
+            coor_min_dim1 = 0
+            coor_min_dim2 = 0
+
+            coor_max_dim1 = 0
+            coor_max_dim2 = 0
             while try_count < MAX_TRY_NUMBER:
                 try_count += 1
 
