@@ -1,5 +1,6 @@
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/collaborative-discrepancy-optimization-for/anomaly-detection-on-mvtec-ad)](https://paperswithcode.com/sota/anomaly-detection-on-mvtec-ad?p=collaborative-discrepancy-optimization-for)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/collaborative-discrepancy-optimization-for/anomaly-detection-on-mvtec-3d-ad-1)](https://paperswithcode.com/sota/anomaly-detection-on-mvtec-3d-ad-1?p=collaborative-discrepancy-optimization-for)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/collaborative-discrepancy-optimization-for-1/anomaly-detection-on-mvtec-ad)](https://paperswithcode.com/sota/anomaly-detection-on-mvtec-ad?p=collaborative-discrepancy-optimization-for-1)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/collaborative-discrepancy-optimization-for-1/anomaly-detection-on-mvtec-3d-ad-1)](https://paperswithcode.com/sota/anomaly-detection-on-mvtec-3d-ad-1?p=collaborative-discrepancy-optimization-for-1)
+
 ## Collaborative Discrepancy Optimization for Reliable Image Anomaly Localization
 [IEEE Transactions on Industrial Informatics 2023](https://ieeexplore.ieee.org/document/10034849)
 
