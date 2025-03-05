@@ -1,0 +1,46 @@
+import os
+os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
+import argparse
+from configs import get_cfg
+from util.net import init_training
+from util.util import run_pre, init_checkpoint
+from trainer import get_trainer
+import warnings
+from data import CLASS_NAMES
+warnings.filterwarnings("ignore")
+
+def main():
+	parser = argparse.ArgumentParser()
+	parser.add_argument('-c', '--cfg_path', default='configs/benchmark/cdo/cdo_256_100e.py')
+	parser.add_argument('-m', '--mode', default='train', choices=['train', 'test'])
+	parser.add_argument('--sleep', type=int, default=-1)
+	parser.add_argument('--memory', type=int, default=-1)
+	parser.add_argument('--dist_url', default='env://', type=str, help='url used to set up distributed training')
+	parser.add_argument('--logger_rank', default=0, type=int, help='GPU id to use.')
+	parser.add_argument('opts', help='path.key=value', default=None, nargs=argparse.REMAINDER,)
+
+
+	###### NOTE: this script only support quick experiments for few/unsupervised/semi-supervised methods
+	for dataset in ['mvtec', 'visa']:
+		print(f"Experiments on {CLASS_NAMES[dataset]}")
+
+		for cls in CLASS_NAMES[dataset]:
+			print(cls)
+			cfg_terminal = parser.parse_args()
+			cfg = get_cfg(cfg_terminal)
+			cfg.train_data.name = dataset
+			cfg.train_data.cls_names = cls
+			cfg.test_data.name = dataset
+			cfg.test_data.cls_names = cls
+
+			run_pre(cfg)
+			init_training(cfg)
+			init_checkpoint(cfg)
+			trainer = get_trainer(cfg)
+			trainer.run()
+
+			del trainer
+
+
+if __name__ == '__main__':
+	main()
